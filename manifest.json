@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "TaskFilter",
+  "version": "1.0",
+  "description": "Can filter asana's task row through assignee",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_icon": {
+      "16": "images/icon16.png",
+      "32": "images/icon32.png",
+      "128": "images/icon128.png"
+    },
+    "default_title": "TaskFilter",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
+
